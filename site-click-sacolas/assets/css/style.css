@@ -1,8 +1,11 @@
 :root {
     --primary-color: #202020;
     --secundary-color: #2e2e2e;
-    --color-grey: #a3a3a3;
+    --color-grey: #e7e7e7;
     --color-btn-cta: #F16232;
+    --font-size: 1.6rem;
+
+    --gap: 2.0rem;
 }
 
 * {
@@ -19,11 +22,18 @@ html {
     font-size: 62.5%;
 }
 
-@media(min-width: 728px) {
-    .top-navigation-wrap {
-        display: none;
-    }
+.top-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--gap);
+    border-bottom: 1px solid var(--color-grey);
 }
+
+/* 
+.top-navigation {
+
+} */
 
 .visually-hidden {
     display: none;
@@ -39,8 +49,8 @@ html {
 .icon.icon-menu {
     -webkit-mask-image: url(/site-click-sacolas/assets/image/bars-solid.svg);
     background-color: var(--primary-color);
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.0rem;
+    height: 2.5rem;
 }
 
 .icon {
@@ -55,4 +65,37 @@ html {
     vertical-align: middle;
     /* width: 1rem; */
     /* width: var(--size); */
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-size: var(--font-size);
+    color: var(--primary-color);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media(min-width: 830px) {
+    .main-menu-toggle {
+        display: none;
+    }
+}
+
+@media(max-width: 829px) {
+    .top-navigation-main {
+        display: none;
+    }
 }

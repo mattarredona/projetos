@@ -53,14 +53,18 @@
 <body>
     <div id="site">
         <div id="header">
-            <div class="top-navigation">
-                <a href="http://clicksacolas.com" class="logo" aria-label="Página inicial do Click Sacolas">
-                    <img src="/site-click-sacolas/assets/image/Click_Sacolas.svg" width="160" height="28"
-                        alt="Click Sacolas - Sacolas personalizadas">
-                </a>
-                <div class="top-navigation-main">
+            <div class="container">
+                <div class="top-navigation">
+                    <a href="http://clicksacolas.com" class="logo" aria-label="Página inicial do Click Sacolas">
+                        <img src="/site-click-sacolas/assets/image/click_sacolas.svg" width="170" height="29"
+                            alt="Click Sacolas - Sacolas personalizadas">
+                    </a>
                     <nav class="main-nav" aria-label="Menu principal">
-                        <ul class="main-menu">
+                        <button title="Abrir menu" type="button" id="main-menu-toggle" aria-controls="main-menu"
+                            aria-haspopup="true" aria-label="Abrir menu" aria-expanded="false">
+                            <span id="hamburger"> </span>
+                        </button>
+                        <ul class="main-menu" role="menu">
                             <li class="top-level-entry-container">
                                 <a href="#" class="top-level-entry">Início</a>
                             </li>
@@ -79,22 +83,53 @@
                         </ul>
                     </nav>
                 </div>
-                <button title="Abrir menu principal" type="button" class="button action has-icon main-menu-toggle"
-                    aria-haspopup="menu" aria-label="Abrir menu principal" aria-expanded="false">
-                    <span class="button-wrap">
-                        <span class="icon icon-menu"></span>
-                        <span class="visually-hidden">Abrir menu principal</span>
-                    </span>
-                </button>
             </div>
         </div>
         <div id="content">
-            <div class="content-container"></div>
+            <div id="container-primeira-dobra">
+                <div class="container section section-primeira-dobra">
+                    <div class="container container-primeira-dobra" id="primeira-dobra-texto">
+                        <h1>Sacolas personalizadas</h1>
+                        <h2>Destaque seu negócio com sacolas personalizadas de alta qualidade. Valorize seus produtos,
+                            encante os clientes e venda muito mais, estabelecendo uma marca forte, duradoura e
+                            diferenciada!</h2>
+                        <button><a href="http://">Entrar em contato</a></button>
+                    </div>
+                    <div class="container container-primeira-dobra" id="primeira-dobra-imagem">
+                        <img src="./assets/image/sacolas-personalizadas-para-loja.webp"
+                            alt="Modelos de sacolas plástica e papel para personalizar" width="532" height="243">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-clientes">
+                <div class="container container-clientes"></div>
+            </div>
+
+            <div class="section section-modelos-sacolas">
+                <div class="container container-modelos-sacolas"></div>
+            </div>
+
+            <div class="section section-copy">
+                <div class="container container-copy"></div>
+            </div>
+
+            <div class="section section-processo">
+                <div class="container container-processo"></div>
+            </div>
+
+            <div class="section section-empresa">
+                <div class="container container-empresa"></div>
+            </div>
+
         </div>
+
         <div id="footer">
             <div class="footer-container"></div>
         </div>
     </div>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

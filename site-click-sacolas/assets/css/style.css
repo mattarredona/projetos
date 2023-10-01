@@ -6,9 +6,10 @@
     --color-btn-cta: #EE4D2D;
     --border-radius: 3px;
     --font-size: 1.6rem;
-    --cta-padding: 10px 20px;
+    --h2-size: 2.8rem;
+    --cta-padding: 12px 28px;
     --cta-border-radius: 3px;
-    --cta-font-size: 1.7rem;
+    --cta-font-size: 1.8rem;
     --gap: 1.4rem;
 }
 
@@ -57,7 +58,7 @@ h1 {
     /* top: 0; */
     width: 100%;
     background: #fff;
-    box-shadow: inset 0 -1px 0 rgba(207,207,205,.6);
+    box-shadow: inset 0 -1px 0 rgba(207, 207, 205, .6);
 }
 
 
@@ -154,9 +155,22 @@ ul {
         overflow-y: hidden;
         background: #fafafa;
     }
-    
+
+    #container-primeira-dobra .section-primeira-dobra {
+        display: block;
+    }
+
+    #primeira-dobra-imagem {
+        margin-top: 30px;
+    }
+
+    #primeira-dobra-imagem img {
+        width: 100%;
+        height: 100%;
+    }
+
     .main-nav.active .main-menu {
-        box-shadow: inset 0 -1px 0 rgba(207,207,205,.6);
+        box-shadow: inset 0 -1px 0 rgba(207, 207, 205, .6);
         height: 215px;
         visibility: visible;
         /* overflow-y: auto; Cria a barra de rolagem no menu mobile, caso existam muitos itens no menu */
@@ -173,7 +187,7 @@ ul {
     .main-menu li {
         margin: 0;
         display: flex;
-        padding: 5px ;
+        padding: 5px;
     }
 
     #main-menu-toggle {
@@ -191,12 +205,14 @@ ul {
         border-top: 2px solid var(--primary-color);
     }
 
-    #hamburger::after, #hamburger::before {
+    #hamburger::after,
+    #hamburger::before {
         content: '';
         display: block;
         width: 20px;
         height: 2px;
-        background: currentColor;  /* CurrentColor Mantém a cor de quem criou, no caso o hamburger */
+        background: currentColor;
+        /* CurrentColor Mantém a cor de quem criou, no caso o hamburger */
         margin-top: 5px;
         transition: .3s;
         position: relative;
@@ -214,15 +230,27 @@ ul {
         transform: rotate(-135deg);
         top: -7px;
     }
+
+    .section-clientes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-modelos-sacolas h2 {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
 }
 
 @media (min-width: 992px) {
-    
+
     .header {
         padding-right: 48px;
         padding-left: 48px;
     }
 }
+
 
 
 /* Conteudo */
@@ -233,7 +261,26 @@ ul {
 
 .section {
     align-items: center;
-    padding: 60px var(--gap);
+    padding: 40px var(--gap);
+}
+
+.section-clientes {
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-clientes {
+    padding: 10px;
+}
+
+#container-clientes {
+    padding-top: 40px;
+    max-width: 800px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 .section-primeira-dobra {
@@ -244,21 +291,32 @@ ul {
     font-size: 4rem;
 }
 
-.container-primeira-dobra h2 {
+.container-primeira-dobra p {
     font-size: 2.2rem;
-    margin-top: 24px;
-    margin-bottom: 18px;
+    margin-top: 22px;
+    margin-bottom: 30px;
     font-weight: 400;
 }
 
 .container-primeira-dobra a {
     color: #fff;
     font-size: var(--cta-font-size);
-}
-
-.container-primeira-dobra button {
     padding: var(--cta-padding);
     background-color: var(--color-btn-cta);
     border: none;
     border-radius: var(--cta-border-radius);
+}
+
+.container-primeira-dobra a:hover {
+    background-color: #f56346;
+}
+
+.section-modelos-sacolas h2 {
+    font-size: var(--h2-size);
+    font-weight: 500;
+}
+
+.section-modelos-sacolas {
+    text-align: center;
+    font-weight: 500;
 }
